@@ -97,7 +97,7 @@ def parse_json(zip_file_path,load_all=False):
 
 # Function to print recipe details from a pandas Series
 def print_recipe(recipe):
-    # print(f"Recipe ID: {recipe['recipe_id']}")
+    print("\n" + "-"*40 + "\n")
     print(f"Title: {recipe['title']}")
     print("Ingredients:")
 

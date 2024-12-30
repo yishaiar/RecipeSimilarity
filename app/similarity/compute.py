@@ -5,6 +5,16 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Load pre-trained SBERT model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
+def prepare_data(df):
+    '''Prepare the data for the similarity computation by combining the ingredients, title, instructions 
+    of the recipe into a single list'''
+    data = []
+    for i in df.index:
+        data.append([df.loc[i,'ingredients'],   # ingredients
+                     df.loc[i,'title'],         # title
+                     df.loc[i,'instructions'],         # instructions
+                     ])
+    return data
 def compute_sentence_embedding(sentence, model):
     """Generate embeddings for a single sentence."""
     embedding = model.encode([sentence])[0]

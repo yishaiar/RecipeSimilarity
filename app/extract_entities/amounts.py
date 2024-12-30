@@ -100,11 +100,17 @@ def extract_entities(df, columns_to_extract = []):
             df[new_columns[f'{column}_amount_orig']] = df[column].copy().apply(lambda x: find_numeric_amounts(x) if pd.notna(x) else x)
             df[new_columns[f'{column}_amount_converted']] = convert_amounts_unit(df[new_columns[f'{column}_units_orig']].copy(), df[new_columns[f'{column}_amount_orig']].copy(),measurement_units)
 
-            
-            df[f'{column}_amount'] = df.apply(lambda row: {key: row[key] for key in new_columns.values()}, axis=1)
+            # original values - amount and units - not required so commented: used for debugging
+            # df[f'{column}_orig'] = df.apply(lambda row: {key: row[key] for key in 
+            #                                                [new_columns[f'{column}_amount_orig'],new_columns[f'{column}_units_orig'],]
+            #                                                }, axis=1)
+            df[f'{column}_converted'] = df.apply(lambda row: {key: row[key] for key in 
+                                                [new_columns[f'{column}_amount_converted'],new_columns[f'{column}_units_converted'],]
+                                                }, axis=1)
+            # rows with no units and no amounts are seasoning and should be set to None 
             ind = df[new_columns[f'{column}_units_orig']].isnull() & df[new_columns[f'{column}_amount_orig']].isnull() & ~df[column].isnull()
-            # rows with no units and no amounts are seasoning
-            df.loc[ind[ind].index,f'{column}_amount'] = None
+            df.loc[ind[ind].index,f'{column}_converted'],df.loc[ind[ind].index,f'{column}_ingredients'] = None,None
+            
             # drop temporary columns used for extraction
             df.drop(new_columns.values(),inplace=True,axis=1)
         except Exception as e:
