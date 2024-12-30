@@ -1,0 +1,556 @@
+{
+    "cup": {
+      "type": "volume",
+      "conversion": 1,
+      "unit": "cup",
+      "description": "base unit is cup"
+    },
+    "cups": {
+      "type": "volume",
+      "conversion": 1,
+      "unit": "cup",
+      "description": "plural form of cup"
+    },
+    "teaspoon": {
+      "type": "volume",
+      "conversion": 0.020833333333333332,
+      "unit": "cup",
+      "description": "1 tsp = 1/48 cup"
+    },
+    "teaspoons": {
+      "type": "volume",
+      "conversion": 0.020833333333333332,
+      "unit": "cup",
+      "description": "plural form of teaspoon"
+    },
+    "tsp": {
+      "type": "volume",
+      "conversion": 0.020833333333333332,
+      "unit": "cup",
+      "description": "abbreviation for teaspoon"
+    },
+    "tbs": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "1 tbsp = 1/16 cup"
+    },
+    "tbsps": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "plural form of tablespoon"
+    },
+    "tablespoon": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "1 tbsp = 1/16 cup"
+    },
+    "tablespoons": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "plural form of tablespoon"
+    },
+    "tbsp": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "abbreviation for tablespoon"
+    },
+    "ounce": {
+      "type": "volume",
+      "conversion": 0.125,
+      "unit": "cup",
+      "description": "1 oz = 1/8 cup"
+    },
+    "ounces": {
+      "type": "volume",
+      "conversion": 0.125,
+      "unit": "cup",
+      "description": "plural form of ounce"
+    },
+    "fl oz": {
+      "type": "volume",
+      "conversion": 0.125,
+      "unit": "cup",
+      "description": "fluid ounce"
+    },
+    "fluid ounce": {
+      "type": "volume",
+      "conversion": 0.125,
+      "unit": "cup",
+      "description": "fluid ounce"
+    },
+    "fluid ounces": {
+      "type": "volume",
+      "conversion": 0.125,
+      "unit": "cup",
+      "description": "plural form of fluid ounce"
+    },
+    "liter": {
+      "type": "volume",
+      "conversion": 4.22675,
+      "unit": "cup",
+      "description": "1 liter = 4.22675 cups"
+    },
+    "liters": {
+      "type": "volume",
+      "conversion": 4.22675,
+      "unit": "cup",
+      "description": "plural form of liter"
+    },
+    "milliliter": {
+      "type": "volume",
+      "conversion": 0.004166666666666667,
+      "unit": "cup",
+      "description": "1 ml = 1/240 cup"
+    },
+    "milliliters": {
+      "type": "volume",
+      "conversion": 0.004166666666666667,
+      "unit": "cup",
+      "description": "plural form of milliliter"
+    },
+    "cl": {
+      "type": "volume",
+      "conversion": 0.1,
+      "unit": "cup",
+      "description": "1 cl = 1/10 cup"
+    },
+    "gallon": {
+      "type": "volume",
+      "conversion": 16,
+      "unit": "cup",
+      "description": "1 gallon = 16 cups"
+    },
+    "gallons": {
+      "type": "volume",
+      "conversion": 16,
+      "unit": "cup",
+      "description": "plural form of gallon"
+    },
+    "quart": {
+      "type": "volume",
+      "conversion": 4,
+      "unit": "cup",
+      "description": "1 quart = 4 cups"
+    },
+    "quarts": {
+      "type": "volume",
+      "conversion": 4,
+      "unit": "cup",
+      "description": "plural form of quart"
+    },
+    "pint": {
+      "type": "volume",
+      "conversion": 2,
+      "unit": "cup",
+      "description": "1 pint = 2 cups"
+    },
+    "pints": {
+      "type": "volume",
+      "conversion": 2,
+      "unit": "cup",
+      "description": "plural form of pint"
+    },
+    "pt": {
+      "type": "volume",
+      "conversion": 2,
+      "unit": "cup",
+      "description": "abbreviation for pint"
+    },
+
+    "tbls": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "abbreviation for tablespoon, 1 tbl = 1/16 cup"
+    },
+    "oz": {
+      "type": "volume",
+      "conversion": 0.125,
+      "unit": "cup",
+      "description": "abbreviation for ounce, 1 oz = 1/8 cup"
+    },
+    "ml": {
+      "type": "volume",
+      "conversion": 0.004166666666666667,
+      "unit": "cup",
+      "description": "abbreviation for milliliter, 1 ml = 1/240 cup"
+    },
+    "l": {
+      "type": "volume",
+      "conversion": 4.22675,
+      "unit": "cup",
+      "description": "abbreviation for liter, 1 liter = 4.22675 cups"
+    },
+
+
+    "pound": {
+      "type": "weight",
+      "conversion": 453.592,
+      "unit": "grams",
+      "description": "1 pound = 453.592 grams"
+    },
+    "pounds": {
+      "type": "weight",
+      "conversion": 453.592,
+      "unit": "grams",
+      "description": "plural form of pound"
+    },
+    "lb": {
+      "type": "weight",
+      "conversion": 453.592,
+      "unit": "grams",
+      "description": "abbreviation for pound"
+    },
+    "lbs": {
+      "type": "weight",
+      "conversion": 453.592,
+      "unit": "grams",
+      "description": "plural abbreviation for pound, weight unit is grams"
+    },
+    "kilogram": {
+      "type": "weight",
+      "conversion": 1000,
+      "unit": "grams",
+      "description": "1 kilogram = 1000 grams"
+    },
+    "kilograms": {
+      "type": "weight",
+      "conversion": 1000,
+      "unit": "grams",
+      "description": "plural form of kilogram"
+    },
+    "kg": {
+      "type": "weight",
+      "conversion": 1000,
+      "unit": "grams",
+      "description": "abbreviation for kilogram"
+    },
+    "gram": {
+      "type": "weight",
+      "conversion": 1,
+      "unit": "grams",
+      "description": "base unit is grams"
+    },
+    "grams": {
+      "type": "weight",
+      "conversion": 1,
+      "unit": "grams",
+      "description": "plural form of gram"
+    },
+    "g": {
+      "type": "weight",
+      "conversion": 1,
+      "unit": "grams",
+      "description": "abbreviation for gram"
+    },
+    "stone": {
+      "type": "weight",
+      "conversion": 6350.29,
+      "unit": "grams",
+      "description": "1 stone = 6350.29 grams"
+    },
+    "st": {
+      "type": "weight",
+      "conversion": 6350.29,
+      "unit": "grams",
+      "description": "abbreviation for stone"
+    },
+
+    "tablespoonful": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "1 tablespoonful = 1/16 cup"
+    },
+    "tablespoonfuls": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "plural form of tablespoonful"
+    },
+    "spoonful": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "1 spoonful = 1/16 cup"
+    },
+    "spoons": {
+      "type": "volume",
+      "conversion": 0.0625,
+      "unit": "cup",
+      "description": "plural form of spoonful"
+    },
+
+    "inch": {
+      "type": "length",
+      "conversion": 2.54,
+      "unit": "cm",
+      "description": "1 inch = 2.54 cm"
+    },
+    "inches": {
+      "type": "length",
+      "conversion": 2.54,
+      "unit": "cm",
+      "description": "plural form of inch"
+    },
+    "centimeter": {
+      "type": "length",
+      "conversion": 1,
+      "unit": "cm",
+      "description": "base unit is centimeters"
+    },
+    "centimeters": {
+      "type": "length",
+      "conversion": 1,
+      "unit": "cm",
+      "description": "plural form of centimeter"
+    },
+    "cm": {
+      "type": "length",
+      "conversion": 1,
+      "unit": "cm",
+      "description": "abbreviation for centimeter"
+    },
+    "meter": {
+      "type": "length",
+      "conversion": 100,
+      "unit": "cm",
+      "description": "1 meter = 100 cm"
+    },
+    "meters": {
+      "type": "length",
+      "conversion": 100,
+      "unit": "cm",
+      "description": "plural form of meter"
+    },
+    "m": {
+      "type": "length",
+      "conversion": 100,
+      "unit": "cm",
+      "description": "abbreviation for meter"
+    },
+    "yard": {
+      "type": "length",
+      "conversion": 91.44,
+      "unit": "cm",
+      "description": "1 yard = 91.44 cm"
+    },
+    "yards": {
+      "type": "length",
+      "conversion": 91.44,
+      "unit": "cm",
+      "description": "plural form of yard"
+    },
+    "foot": {
+      "type": "length",
+      "conversion": 30.48,
+      "unit": "cm",
+      "description": "1 foot = 30.48 cm"
+    },
+    "feet": {
+      "type": "length",
+      "conversion": 30.48,
+      "unit": "cm",
+      "description": "plural form of foot"
+    },
+
+    "clove": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "clove, no direct conversion available"
+    },
+    "cloves": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of clove, no direct conversion available"
+    },
+    "slice": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "slice, no direct conversion available"
+    },
+    "slices": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of slice, no direct conversion available"
+    },
+    "pinch": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "pinch, no direct conversion available"
+    },
+    "pinches": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of pinch, no direct conversion available"
+    },
+    "drop": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit":  "none",
+      "description": "no direct conversion available"
+    },
+    "drops": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit":  "none",
+      "description": "no direct conversion available"
+    },
+    "dash": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "dash, no direct conversion available"
+    },
+    "dashes": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of dash, no direct conversion available"
+    },
+    "block": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "block, no direct conversion available"
+    },
+    "blocks": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of block, no direct conversion available"
+    },
+    "piece": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "piece, no direct conversion available"
+    },
+    "pieces": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of piece, no direct conversion available"
+    },
+    "serving": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "serving, no direct conversion available"
+    },
+    "servings": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of serving, no direct conversion available"
+    },
+    "portion": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "portion, no direct conversion available"
+    },
+    "portions": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of portion, no direct conversion available"
+    },
+    "glass": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "glass, no direct conversion available"
+    },
+    "bowl": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "bowl, no direct conversion available"
+    },
+    "splash": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "splash, no direct conversion available"
+    },
+    "pack": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "pack, no direct conversion available"
+    },
+    "packet": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "packet, no direct conversion available"
+    },
+    "packets": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of packet, no direct conversion available"
+    },
+    "bunch": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "bunch, no direct conversion available"
+    },
+    "bunches": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of bunch, no direct conversion available"
+    },
+    "head": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "head, no direct conversion available"
+    },
+    "heads": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of head, no direct conversion available"
+    },
+    "bag": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "bag, no direct conversion available"
+    },
+    "bags": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of bag, no direct conversion available"
+    },
+    "box": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "box, no direct conversion available"
+    },
+    "boxes": {
+      "type": "miscellaneous",
+      "conversion": null,
+      "unit": "none",
+      "description": "plural form of box, no direct conversion available"
+    }
+
+  }
+  

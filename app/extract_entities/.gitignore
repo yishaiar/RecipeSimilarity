@@ -8,5 +8,6 @@ __pycache__/
 *.cfg
 *.mat
 
-*.pdf
 *.DS_Store
+
+
