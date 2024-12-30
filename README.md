@@ -14,8 +14,7 @@ A typical recipe looks something like this:
 
 
 ```python
-# some python code for reference..
-project run from main.py / main.ipynb
+project run from main.ipynb
 
 
 
@@ -27,4 +26,4 @@ project run from main.py / main.ipynb
     ```
 
 ## 📋 TODOs
-- run from cli: python -m spacy download en_core_web_sm
+- run from cli of the project envirement (venv): python -m spacy download en_core_web_sm
