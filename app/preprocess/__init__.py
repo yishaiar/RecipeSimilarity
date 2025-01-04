@@ -21,7 +21,6 @@ def standardize(recipes,required_fields ):
     ingredients_max_length: maximum number of ingredients in a recipe
     
     Standardize Fields:ensure consistent structure in each recipe
-    drop recipes without instructions
     flatten ingredients list into separate columns
     Ensure that each recipe follows the same structure (represented with consistent fields)
     return:

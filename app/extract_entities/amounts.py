@@ -140,3 +140,28 @@ def extract_ingredient(nlp,units,text):
             # print(f"Word: {token.text}, POS: {token.pos_}, Tag: {token.tag_}, Ent: {token.ent_type_}")
     # remove nouns which are units of measurement
     return [noun for noun in nouns if noun not in units]
+
+import re
+
+def sort_columns(df):
+    # Step 1: Define the fixed non-numeric columns (as specified)
+    non_numeric_columns = ['title', 'instructions', 'picture_link', 'website']
+
+    # Step 2: Separate numeric columns (those that start with digits)
+    numeric_columns = [col for col in df.columns if re.match(r'^\d+', col)]
+
+    # Step 3: Sort numeric columns based on the numeric part at the start (ignoring suffixes)
+    def sort_natural(col):
+        # Extract the leading number from the column name
+        match = re.match(r'(\d+)', col)
+        if match:
+            return int(match.group(1))  # Convert to integer for proper sorting
+        return float('inf')  # If not a numeric column, put it at the end
+
+    # Step 4: Sort numeric columns
+    numeric_columns_sorted = sorted(numeric_columns, key=sort_natural)
+
+    # Step 5: Combine non-numeric columns and sorted numeric columns
+    sorted_columns = non_numeric_columns + numeric_columns_sorted
+
+    return sorted_columns

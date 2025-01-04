@@ -18,9 +18,11 @@ def plot_heatmap(similarity_matrix, labels=None):
     labels = [f"Recipe {i+1}" for i in range(len(similarity_matrix))]
 
     # step 2: limit the labels to a subset to avoid clutter
-    subset_size = 50  # Display the first 50 recipes
+    subset_size = 60  # Display the first 60 recipes
     subset_labels = labels[:subset_size]
-    subset_matrix = similarity_matrix[:subset_size, :subset_size]
+    index = similarity_matrix.index[:subset_size]   # Get the first 60 recipes
+    subset_matrix = similarity_matrix[index].loc[index].values
+    # subset_matrix = similarity_matrix[:subset_size, :subset_size]
 
     # Step 3: Create the heatmap for a smaller subset of the matrix
     plt.figure(figsize=(15, 12))  # Set the size of the plot
@@ -29,7 +31,8 @@ def plot_heatmap(similarity_matrix, labels=None):
     sns.heatmap(subset_matrix, annot=False, cmap='YlGnBu', xticklabels=subset_labels, yticklabels=subset_labels, cbar=True)
 
     # Add labels and title
-    plt.title("Recipe Similarity Matrix (Subset of 50 Recipes)")
+    title = "Recipe Similarity Matrix (Subset of 50 Recipes)" if subset_size < len(labels) else "Recipe Similarity Matrix"
+    plt.title(title)
     plt.xlabel("Recipes")
     plt.ylabel("Recipes")
 

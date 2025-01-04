@@ -1,5 +1,6 @@
 from sentence_transformers import SentenceTransformer
 import numpy as np
+import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load pre-trained SBERT model
@@ -44,19 +45,33 @@ def compute_weighted_similarity(embedding_data_1, embedding_data_2, weights):
         weighted_similarity += weight * compute_cosine_similarity(embedding_sentence_1, embedding_sentence_2)
     return weighted_similarity
 
-def compute_similarity_matrix(data_sets, weights):
+def compute_similarity_matrix(recipes, weights,index = None):
     """Compute a similarity matrix for multiple recipe datasets."""
-    # Generate embeddings for each dataset
-    embeddings = [compute_data_embedding(data, model) for data in data_sets]
+    # Generate embeddings for each recipe dataset
+    embeddings = [compute_data_embedding(recipe, model) for recipe in recipes]
     
-    # Initialize the similarity matrix
-    num_recipes = len(data_sets)
-    similarity_matrix = np.zeros((num_recipes, num_recipes))
-    
+
     # Compute pairwise weighted similarity for all pairs of recipes
+    num_recipes = len(recipes)
+    similarity_matrix = -np.ones((num_recipes, num_recipes))
     for i in range(num_recipes):
-        for j in range(num_recipes):
-            similarity_matrix[i][j] = compute_weighted_similarity(embeddings[i], embeddings[j], weights)
-    
+        for j in range(i, num_recipes):  # Start from i to avoid redundant pairs
+            similarity = compute_weighted_similarity(embeddings[i], embeddings[j], weights)
+            similarity_matrix[i][j] = similarity
+            similarity_matrix[j][i] = similarity  # Ensure symmetry
+    index = index if index is not None else range(num_recipes)
+    similarity_matrix = pd.DataFrame(similarity_matrix, index=index, columns=index)
     return similarity_matrix
 
+def min_max_indexes_symetric_df(df):
+    # Mask the lower triangle and diagonal to avoid redundant pairs to find max (drop the diagonal)
+    upper_triangle_df = pd.DataFrame(np.triu(df.values, k=1), index=df.index, columns=df.columns)
+    
+    # Get the indices of the min and max values in the upper triangle
+    min_idx = df.stack().idxmin()  # Returns (row, column) of min value
+    max_idx = upper_triangle_df.stack().idxmax()  # Returns (row, column) of max value
+
+    # the value of the min and max values
+    min_value = df.loc[min_idx[0], min_idx[1]]
+    max_value = df.loc[max_idx[0], max_idx[1]]
+    return min_idx, max_idx ,min_value,max_value

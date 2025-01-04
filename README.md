@@ -1,4 +1,4 @@
-# Name this repo!
+# RecipeSimilarity
 Develop a system to analyze and compare recipes from various online sources. The goal is to identify recipes that are essentially identical, despite variations in presentation and wording across different recipes.
 # Data:
 Please download the dataset from the following link: [Recipe Ingredient Data](https://eightportions.com/datasets/Recipes/)

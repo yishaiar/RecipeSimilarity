@@ -27,7 +27,14 @@ def download_zip(data_dir,url, ):
         
 
 
-def parse_json(zip_file_path,load_all=False):
+def parse_json(zip_file_path,load_all=False,LEN=100):
+    '''
+    Function to parse a ZIP file containing multiple JSON files and merge them into a single dictionary.
+    zip_file_path: str, path to the ZIP file
+    load_all: bool, if True, load all the keys from the JSON files, otherwise load a subset of keys
+    LEN: int, number of keys to load from each JSON file if load_all is False
+    '''
+    
     # Initialize an empty dictionary to store the data
     data = {}    
 
@@ -61,7 +68,7 @@ def parse_json(zip_file_path,load_all=False):
             print(tmp[key].keys())
             
             if not load_all:# load only 100 keys from the each file
-                keys = list(tmp.keys())[:100]
+                keys = list(tmp.keys())[:LEN]
                 tmp = {key: tmp[key] for key in keys}
             
             data.update(tmp)
@@ -97,7 +104,6 @@ def parse_json(zip_file_path,load_all=False):
 
 # Function to print recipe details from a pandas Series
 def print_recipe(recipe):
-    print("\n" + "-"*40 + "\n")
     print(f"Title: {recipe['title']}")
     print("Ingredients:")
 
